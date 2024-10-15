@@ -26,7 +26,7 @@
         <div class="">
             <ul class="list-items">
                 <li>
-                    <a href="#introduce">About</a>
+                    <a href="#">About</a>
                 </li>
                 <li>
                     <a href="/templates/upload.html">Upload</a>
@@ -38,19 +38,23 @@
         </div>
     </nav>
 
-    <section id="introduce">
-        <div class="content font-white">
-            <div class="">
-              
-                <h1 class="">
-                    <strong class="">Hi there! I'm VanEval</strong>
-                </h1>
-                <p class="">demo</p>
-                <p class="">demo</p>
-            </div>
-        </div>
+    <section id="upload">
+        <div class="upload-container">
+            <h2>Upload Image</h2>
+            <p>Choose an image file to upload.</p>
+        
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+              <label for="fileInput">Image</label>
+              <input type="file" name="image" id="fileInput" accept="image/*" required>
+              <button type="submit">
+                <span>Upload</span>
+              </button>
+            </form>
+        
+            <p id="statusMessage"></p>
+          </div>
     </section>
-    
+        
     
     
     
