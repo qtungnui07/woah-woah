@@ -9,6 +9,7 @@
     <!-- link css -->
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/tagid.css">
+    <link rel="stylesheet" href="/css/upload-photo.css">
     
 
     <!--icon-->
@@ -17,44 +18,14 @@
 
 </head>
 <body>
-    <img src="/assets/stars.png" alt="overlay-stars" class="stars-overlay">
-    <nav class="namelist nav-bar">
-        <span class="navbar-caption-warp">
-            <a href="index.html" class="brand-name">VanEval</a>
-        </span>
-
-        <div class="">
-            <ul class="list-items">
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="/templates/upload.html">Upload</a>
-                </li>
-                <li>
-                    <a href="/templates/history.html">History</a>
-                </li>
-            </ul>
+    <div class="upload-container">
+        <div class="upload-area" id="upload-area">
+            <p>Drop Image Here <br> - or - <br> Click to Upload</p>
+            <input type="file" id="file-input" accept="image/*" style="display: none;">
+            
         </div>
-    </nav>
-
-    <section id="upload">
-        <div class="upload-container">
-            <h2>Upload Image</h2>
-            <p>Choose an image file to upload.</p>
-        
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-              <label for="fileInput">Image</label>
-              <input type="file" name="image" id="fileInput" accept="image/*" required>
-              <button type="submit">
-                <span>Upload</span>
-              </button>
-            </form>
-        
-            <p id="statusMessage"></p>
-          </div>
-    </section>
-        
+        <img id="preview" src="" alt="Image Preview" style="display: none;">
+    </div>    
     
     
     
@@ -75,5 +46,6 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/assets/js/upload.js"></script>
 </body>
 </html>
